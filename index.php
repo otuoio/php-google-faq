@@ -3,6 +3,7 @@ Ci sono diverse domande con relative risposte. Gestire il “Database” e la vi
 
 <?php
 
+    // database domande e risposte
     $db = [
         [
             'question' => 'Come state implementando la recente decisione della Corte di giustizia dell\'Unione europea (CGUE) relativa al diritto all\'oblio?',
@@ -16,8 +17,10 @@ Ci sono diverse domande con relative risposte. Gestire il “Database” e la vi
             <br><br>
             Quando cerchi un nome, potresti trovare una notifica in cui viene spiegato che i risultati potrebbero essere stati modificati nel rispetto delle leggi europee per la protezione dei dati. Mostriamo questa notifica agli utenti europei quando cercano la maggior parte dei nomi, non soltanto le pagine che sono state soggette a una rimozione.',
             'sections' => [
-                'title' => '',
-                'description' => ''
+                [
+                    'title' => '',
+                    'description' => ''
+                ]
             ]
         ],
         [
@@ -30,8 +33,10 @@ Ci sono diverse domande con relative risposte. Gestire il “Database” e la vi
             <br><br>
             Scopri quali misure adottiamo per garantire protezione e sicurezza alle tue informazioni personali, lasciando a te il controllo.',
             'sections' => [
-                'title' => '',
-                'description' => ''
+                [
+                    'title' => '',
+                    'description' => ''
+                ]
             ]
         ],
         [
@@ -44,32 +49,39 @@ Ci sono diverse domande con relative risposte. Gestire il “Database” e la vi
             <br><br>
             Tieni presente che i servizi Google sono fondamentalmente gli stessi a prescindere dalla società consociata che li offre o dal paese a cui è associato il tuo account.',
             'sections' => [
-                'title' => 'Stabilire il paese associato al tuo account',
-                'description' => 'Quando crei un nuovo Account Google, lo associamo a un paese in base a dove è stato creato. Per quanto riguarda gli account creati almeno un anno fa, usiamo il paese da cui accedi solitamente ai servizi Google, in genere i servizi in cui hai trascorso più tempo nell\'ultimo anno.
-                <br><br>
-                I viaggi frequenti solitamente non influiscono sul paese associato al tuo account. Se ti trasferisci in un altro paese, potrebbe occorrere circa un anno per aggiornare l\'associazione del paese.
-                <br><br>
-                Se il paese associato al tuo account non corrisponde al tuo paese di residenza, il motivo potrebbe essere la differenza tra il paese in cui lavori e il paese in cui risiedi, l\'installazione di una rete privata virtuale (VPN) per mascherare il tuo indirizzo IP oppure la residenza vicino a un confine territoriale. Contattaci se ritieni che il paese associato al tuo account sia sbagliato.'
+                [
+                    'title' => 'Stabilire il paese associato al tuo account',
+                    'description' => 'Quando crei un nuovo Account Google, lo associamo a un paese in base a dove è stato creato. Per quanto riguarda gli account creati almeno un anno fa, usiamo il paese da cui accedi solitamente ai servizi Google, in genere i servizi in cui hai trascorso più tempo nell\'ultimo anno.
+                    <br><br>
+                    I viaggi frequenti solitamente non influiscono sul paese associato al tuo account. Se ti trasferisci in un altro paese, potrebbe occorrere circa un anno per aggiornare l\'associazione del paese.
+                    <br><br>
+                    Se il paese associato al tuo account non corrisponde al tuo paese di residenza, il motivo potrebbe essere la differenza tra il paese in cui lavori e il paese in cui risiedi, l\'installazione di una rete privata virtuale (VPN) per mascherare il tuo indirizzo IP oppure la residenza vicino a un confine territoriale. Contattaci se ritieni che il paese associato al tuo account sia sbagliato.'
+                ]
             ]
         ],
         [
             'question' => 'Come faccio a rimuovere informazioni su di me dai risultati di ricerca di Google?',
             'answer' => 'I risultati di ricerca di Google rispecchiano i contenuti pubblicamente disponibili sul Web. I motori di ricerca non possono rimuovere i contenuti direttamente dai siti web, quindi rimuovere risultati di ricerca da Google non consente di rimuovere i contenuti dal Web. Se desideri rimuovere qualcosa dal Web, devi contattare il webmaster del sito su cui sono pubblicati i contenuti e chiedergli di apportare una modifica. Inoltre, se, ai sensi delle leggi europee per la protezione dei dati, desideri richiedere la rimozione di determinate informazioni su di te visualizzate nei risultati di ricerca di Google, fai clic qui. Una volta che i contenuti saranno stati rimossi e che Google avrà rilevato l\'aggiornamento, le informazioni non verranno più visualizzate nei risultati di ricerca di Google. In caso di una richiesta di rimozione urgente, è inoltre possibile visitare la nostra pagina di assistenza per avere ulteriori informazioni.',
             'sections' => [
-                'title' => '',
-                'description' => ''
+                [
+                    'title' => '',
+                    'description' => ''
+                ]
             ]
         ],
         [
             'question' => 'Quando faccio clic sui risultati della Ricerca Google, le mie chiavi di ricerca vengono inviate ai siti web?',
             'answer' => 'In alcuni casi sì. Quando fai clic su un risultato della Ricerca Google, il tuo browser web potrebbe reindirizzare alla pagina web di destinazione anche l\'indirizzo Internet, o URL, della pagina dei risultati di ricerca sotto forma di URL referrer. Talvolta, l\'URL della pagina dei risultati di ricerca potrebbe contenere la query di ricerca che hai inserito. Se utilizzi la ricerca SSL (la funzione di ricerca criptata di Google), nella maggior parte dei casi i termini di ricerca non vengono inviati come parte dell\'URL negli URL referrer. Questo comportamento può fare eccezione, ad esempio se utilizzi alcuni browser meno diffusi. Ulteriori informazioni sulla ricerca SSL sono disponibili qui. Le query di ricerca o le informazioni contenute nell\'URL referrer potrebbero essere disponibili mediante Google Analytics o un\'API (Application Programming Interface). Inoltre, gli inserzionisti potrebbero ricevere informazioni relative all\' esatte parole chiave che hanno determinato il clic su un annuncio.',
             'sections' => [
-                'title' => '',
-                'description' => ''
+                [
+                    'title' => '',
+                    'description' => ''
+                ]
             ]
         ],
     ];
 
+    
 ?>
 
 <!DOCTYPE html>
@@ -88,7 +100,27 @@ Ci sono diverse domande con relative risposte. Gestire il “Database” e la vi
 
     <!-- main -->
     <main>
-        <?php echo $db[0]['answer']?>
+        <div class="faqs">
+            <?php 
+                // ciclo per selezionare domande e risposte ed eventuali sottopragrafi
+                foreach ($db as $faq) {
+            ?>
+            <div class="faq">
+                <?php
+                    echo '<h1 class="question">' . $faq['question'] . '</h1>';
+                    echo '<p class="answer">' . $faq['answer'] . '</p>';
+                    foreach ($faq['sections'] as $section) {
+                        if ($section['title'] !== '' && $section['description'] !== '') {
+                            echo '<h2 class="sec-title">' . $section['title'] . '</h2>';
+                            echo '<p class="sec-description">' . $section['description'] . '</p>';
+                        };
+                    };
+                ?>
+            </div>
+            <?php
+                };
+            ?>
+        </div>
     </main>
     <!-- /main -->
 

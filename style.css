@@ -1,5 +1,7 @@
 :root {
     --blue-color: rgb(0, 81, 255);
+    --black-color: rgb(31, 30, 30);
+    --gray-color: rgb(243, 243, 243);
 }
 
 * {
@@ -26,7 +28,17 @@ html {
 }
 
 /* HEADER */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    background-color: white;
+}
+
 /* header user */
+
 .user {
     display: flex;
     justify-content: space-between;
@@ -103,7 +115,73 @@ html {
 }
 
 /* MAIN */
-.faqs {
-    padding: 10em;
+ol li {
+    font-size: .9rem;
+    font-weight: 400;
+    color: var(--black-color);
+    margin: 1rem 0;
+    padding-left: 1rem;
 }
 
+.faqs {
+    padding: 10em 10em 0;
+}
+
+.faq {
+    margin-bottom: 4em;
+}
+
+.faq .question {
+    font-size: 2em;
+    font-weight: 400;
+    color: var(--black-color);
+    margin-bottom: 1em;
+}
+.faq .answer,
+.faq .sec-description {
+    font-size: .9em;
+    font-weight: 400;
+    color: var(--black-color);
+    margin-bottom: 1em;
+}
+.faq .sec-title {
+    font-size: 1.5em;
+    font-weight: 400;
+    color: var(--black-color);
+    margin-bottom: 1em;
+}
+
+/* FOOTER */
+.footer-menu {
+    background-color: var(--gray-color);
+    border-top: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 10em;
+}
+.footer-menu .nav-foot {
+    width: 20%;
+}
+.footer-menu .nav-foot .menu-inline li {
+    margin-right: .4em;
+}
+.footer-menu .nav-foot .menu-inline li a {
+    font-size: .8em;
+    font-weight: 300;
+    margin-right: .5em;
+}
+.footer-menu .nav-foot .menu-inline li span {
+    color: gray;
+}
+
+.footer-menu .language {
+    width: 20%;
+    text-align: right;
+}
+.footer-menu .language i {
+    color: var(--blue-color);
+    margin-right: .5em;
+}
+.footer-menu .language select {
+    width: 70%;
+}

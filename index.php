@@ -57,8 +57,8 @@ Ci sono diverse domande con relative risposte. Gestire il “Database” e la vi
                     La versione dei termini che regola il nostro rapporto, che può variare in base alle leggi locali.
                 </li>
             </ol>
-            <br><br>
-            Tieni presente che i servizi Google sono fondamentalmente gli stessi a prescindere dalla società consociata che li offre o dal paese a cui è associato il tuo account.',
+            <br>
+            <p class="answer">Tieni presente che i servizi Google sono fondamentalmente gli stessi a prescindere dalla società consociata che li offre o dal paese a cui è associato il tuo account.</p>',
             'sections' => [
                 [
                     'title' => 'Stabilire il paese associato al tuo account',
@@ -170,9 +170,9 @@ Ci sono diverse domande con relative risposte. Gestire il “Database” e la vi
         <div class="footer-menu">
             <nav class="nav-foot">
                 <ul class="menu-inline">
-                    <li><a href="#">Google</a></li>
-                    <li><a href="#">Tutto su Google</a></li>
-                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Google</a><span>&#183;</span></li>
+                    <li><a href="#">Tutto su Google</a><span>&#183;</span></li>
+                    <li><a href="#">Privacy</a><span>&#183;</span></li>
                     <li><a href="#">Termini</a></li>
                 </ul>
             </nav>

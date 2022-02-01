@@ -42,10 +42,21 @@ Ci sono diverse domande con relative risposte. Gestire il “Database” e la vi
         [
             'question' => 'Perché il mio account è associato a un paese?',
             'answer' => 'Il tuo account è associato a un paese (o territorio) nei Termini di servizio per poter stabilire due cose:
-                <ol><li>La società consociata Google che offre i servizi, tratta le tue informazioni ed è responsabile del rispetto delle leggi sulla privacy vigenti. Generalmente Google offre i propri servizi per i consumatori tramite una delle due società seguenti:
-                    <ol><li>Google Ireland Limited, se gli utenti sono residenti nello Spazio economico europeo (paesi dell\'Unione europea, oltre a Islanda, Liechtenstein e Norvegia) o in Svizzera.</li>
-                    <li>Google LLC, con sede negli Stati Uniti, per il resto del mondo.</li></li>
-                <li>La versione dei termini che regola il nostro rapporto, che può variare in base alle leggi locali.</li></ol>
+            <ol style="list-style: decimal; padding-left: 1em;">
+                <li>
+                    La società consociata Google che offre i servizi, tratta le tue informazioni ed è responsabile del rispetto delle leggi sulla privacy vigenti. Generalmente Google offre i propri servizi per i consumatori tramite una delle due società seguenti:
+                    <ol style="list-style: lower-alpha; padding-left: 1em;">
+                        <li>
+                            Google Ireland Limited, se gli utenti sono residenti nello Spazio economico europeo (paesi dell\'Unione europea, oltre a Islanda, Liechtenstein e Norvegia) o in Svizzera.
+                        </li>
+                        <li>
+                            Google LLC, con sede negli Stati Uniti, per il resto del mondo.
+                        </li>
+                    </ol>
+                <li>
+                    La versione dei termini che regola il nostro rapporto, che può variare in base alle leggi locali.
+                </li>
+            </ol>
             <br><br>
             Tieni presente che i servizi Google sono fondamentalmente gli stessi a prescindere dalla società consociata che li offre o dal paese a cui è associato il tuo account.',
             'sections' => [
@@ -90,12 +101,43 @@ Ci sono diverse domande con relative risposte. Gestire il “Database” e la vi
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">     
+
+    <!-- style -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>Google FAQ</title>
 </head>
 <body>
     <!-- header -->
-    <header></header>
+    <header>
+        <div class="user">
+            <div class="logo-section">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1024px-Google_2015_logo.svg.png" alt="">
+                <span>Privacy e termini</span>
+            </div>
+            <div class="user-section">
+                <i class="fas fa-th"></i>
+                <span>M</span>
+            </div>
+        </div>
+        <nav class="nav-menu">
+            <ul class="menu-inline">
+                <li><a href="#">Introduzione</a></li>
+                <li><a href="#">Norme sulla privacy</a></li>
+                <li><a href="#">Termini di servizio</a></li>
+                <li><a href="#">Tecnologie</a></li>
+                <li class="active"><a href="#">Domande frequenti</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
     <!-- /header -->
 
     <!-- main -->
@@ -125,7 +167,27 @@ Ci sono diverse domande con relative risposte. Gestire il “Database” e la vi
     <!-- /main -->
 
     <!-- footer -->
-    <footer></footer>
+    <footer>
+        <div class="footer-menu">
+            <nav class="nav-foot">
+                <ul class="menu-inline">
+                    <li><a href="#">Google</a></li>
+                    <li><a href="#">Tutto su Google</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Termini</a></li>
+                </ul>
+            </nav>
+            <div class="language">
+                <i class="fas fa-globe-europe"></i>
+                <select name="lang" id="lang">
+                    <option value="ita" selected="selected">Italiano</option>
+                    <option value="eng">English</option>
+                    <option value="esp">Espanol</option>
+                    <option value="fra">Francois</option>
+                </select>
+            </div>
+        </div>
+    </footer>
     <!-- /footer -->
 </body>
 </html>

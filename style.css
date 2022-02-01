@@ -1,3 +1,7 @@
+:root {
+    --blue-color: rgb(0, 81, 255);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,17 +13,30 @@ html {
     font-family: 'Roboto', sans-serif;
 }
 
+/* COMMONS */
+.menu-inline {
+    list-style: none;
+}
+.menu-inline li {
+    display: inline-block;
+}
+.menu-inline li a {
+    text-decoration: none;
+    color: gray;
+}
+
 /* HEADER */
+/* header user */
 .user {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1em;
 }
 .user .logo-section,
 .user .user-section {
     width: 20%;
     display: flex;
-    padding: 1em;
 }
 
 .user .logo-section {
@@ -32,7 +49,7 @@ html {
 }
 .user .logo-section span {
     display: inline-block;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 300;
     color: gray;
     margin-left: .2em;
@@ -61,8 +78,29 @@ html {
     font-weight: 300;
 }
 
+/* header navbar */
+.nav-menu {
+    padding: 0 1em;
+    border-bottom: 1px solid gray;
+}
 
-
+.nav-menu .menu-inline li {
+    margin-right: 4em;
+    height: 30px;
+}
+.nav-menu .menu-inline li a {
+    font-size: 1em;
+    font-weight: 400;
+}
+.nav-menu .menu-inline li:hover a {
+    color: var(--blue-color);
+}
+.nav-menu .menu-inline li.active {
+    border-bottom: 2px solid var(--blue-color);
+}
+.nav-menu .menu-inline li.active a {
+    color: var(--blue-color);
+}
 
 /* MAIN */
 .faqs {

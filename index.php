@@ -136,7 +136,6 @@ Ci sono diverse domande con relative risposte. Gestire il “Database” e la vi
                 <li class="active"><a href="#">Domande frequenti</a></li>
             </ul>
         </nav>
-        <hr>
     </header>
     <!-- /header -->
 
